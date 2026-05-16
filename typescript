@@ -1,0 +1,151 @@
+Script started on 2026-05-11 15:49:00+01:00 [TERM="xterm-kitty" TTY="/dev/pts/2" COLUMNS="171" LINES="53"]
+]0;artem@RoboticAlt: ~/ros2_wsartem@RoboticAlt:~/ros2_ws$ ros2 topic echo /aruco/targetrun robot_bringup mission_master obot_bringup mission_master     '                                   cd ..
+]0;artem@RoboticAlt: ~artem@RoboticAlt:~$ ls
+[0m[01;34mbuild[0m  [01;34mcamera_stream[0m  [01;34minstall[0m  [01;34mlog[0m  [01;34mros2_jazzy_ws[0m  [01;34mros2_latest[0m  [01;34mros2_ws[0m  script.sh  [01;32mwifi-menu.sh[0m
+]0;artem@RoboticAlt: ~artem@RoboticAlt:~$ vim     chmox d +x script.sh 
+]0;artem@RoboticAlt: ~artem@RoboticAlt:~$ ls
+[0m[01;34mbuild[0m  [01;34mcamera_stream[0m  [01;34minstall[0m  [01;34mlog[0m  [01;34mros2_jazzy_ws[0m  [01;34mros2_latest[0m  [01;34mros2_ws[0m  [01;32mscript.sh[0m  [01;32mwifi-menu.sh[0m
+]0;artem@RoboticAlt: ~artem@RoboticAlt:~$ lschmod +x script.sh ls                 cd ..ros2 topic echo /aruco/targetrun robot_bringup mission_master ]0;artem@RoboticAlt: ~artem@RoboticAlt:~$ ros2 robot_bringup mission_master     ']0;artem@RoboticAlt: ~artem@RoboticAlt:~$ cd ros2_ws                         battery          vim > .bash_rc
+
+E558: Terminal entry not found in terminfo
+'xterm-kitty' not known. Available builtin terminals are:
+    builtin_ansi
+    builtin_vt320
+    builtin_vt52
+    builtin_xterm
+    builtin_iris-ansi
+    builtin_pcansi
+    builtin_win32
+    builtin_amiga
+    builtin_dumb
+    builtin_debug
+defaulting to 'ansi'
+[0m[H[2J[53;1H".bash_rc" [New][2;1H~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~[0m[53;154H0,0-1[9CAll[1;1H[53;144H:[1;1H[53;1H[K[53;1H:q[53;1H[K[53;1H]0;artem@RoboticAlt: ~artem@RoboticAlt:~$ vim .bash_rcrc 
+
+E558: Terminal entry not found in terminfo
+'xterm-kitty' not known. Available builtin terminals are:
+    builtin_ansi
+    builtin_vt320
+    builtin_vt52
+    builtin_xterm
+    builtin_iris-ansi
+    builtin_pcansi
+    builtin_win32
+    builtin_amiga
+    builtin_dumb
+    builtin_debug
+defaulting to 'ansi'
+[0m[H[2J[53;1H".bashrc" 124L, 3991B[1;1Hxterm*|rxvt*)[0m
+    PS1="\[\e[0m]0;${debian_chroot:+[0m($debian_chroot)}\u[0m@\h[0m: \w\a\][0m$PS1"
+[0m    ;;[0m
+*)
+[0m    ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [[0m -x[0m /usr/bin/dircolors ];[0m then
+[0m    test[0m -r[0m ~/.dircolors &&[0m eval[0m "[0m$(dircolors -b ~/.dircolors[0m)"[0m ||[0m eval[0m "[0m$(dircolors -b[0m)"
+[0m    alias [0mls='[0mls --color=auto'
+[0m    #alias dir='dir --color=auto'
+[0m    #alias vdir='vdir --color=auto'[15;5Halias [0mgrep='[0mgrep --color=auto'
+[0m    alias [0mfgrep='[0mfgrep --color=auto'
+[0m    alias [0megrep='[0megrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias [0mll='[0mls -alF'
+alias [0mla='[0mls -A'
+alias [0ml='[0mls -CF'
+alias [0msetup='[0m./script.sh'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias [0malert='[0mnotify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''[0ms/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\''[0m)"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [[0m -f[0m ~/.bash_aliases ];[0m then
+[0m    . [0m~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ![0m shopt -oq[0m posix;[0m then
+[0m  if [[0m -f[0m /usr/share/bash-completion/bash_completion ];[0m then
+[0m    . [0m/usr/share/bash-completion/bash_completion
+  elif[0m [[0m -f[0m /etc/bash_completion ];[0m then
+[0m    . [0m/etc/bash_completion
+  fi
+fi
+export[0m PATH=$HOME/.local/bin:$PATH[53;154H94,25[9C93%[27;25H[53;144Hj[27;25H[53;144H [28;1H[53;155H5,0-1[28;1H[53;144Hj[28;1H[53;144H [29;25H[53;155H6,25 [29;25H[53;144Hj[29;25H[53;144H [30;19H[53;155H7,19[30;19H[53;144Hj[30;19H[53;144H [31;25H[53;155H8,25[31;25H[53;144Hj[31;25H[53;144H [32;1H[53;155H9,0-1[32;1H[53;144Hj[32;1H[53;144H [33;20H[53;154H100,20[33;20H[53;144Hj[33;20H[53;144H [34;25H[53;156H1,25[34;25H[53;144Hj[34;25H[53;144H [35;25H[53;156H2[35;25H[53;144Hj[35;25H[53;144H [36;25H[53;156H3[36;25H[53;144Hj[36;25H[53;144H [37;1H[53;156H4,0-1[37;1H[53;144Hj[37;1H[53;144H [38;25H[53;156H5,25 [38;25H[53;144Hj[38;25H[53;144H [39;21H[53;156H6,21[39;21H[53;144Hj[39;21H[53;144H [40;2H[53;156H7,2 [40;2H[53;144Hj[40;2H[53;144H [41;1H[53;156H8,0-1[41;1H[53;144Hj[41;1H[53;144H [42;25H[53;156H9,25 [42;25H[53;144Hj[42;25H[53;144H [43;25H[53;155H10[43;25H[53;144Hj[43;25H[53;144H [44;25H[53;156H1[44;25H[53;144Hj[44;25H[53;144H [45;25H[53;156H2[45;25H[53;144Hj[45;25H[53;144H [46;25H[53;156H3[46;25H[53;144Hj[46;25H[53;144H [47;25H[53;156H4[47;25H[53;144Hj[47;25H[53;144H [47;25H[53;1H
+[52;1Hsource[0m /opt/ros/jazzy/setup.bash[52;154H[K[53;154H115,25[8C94%[47;25H[53;144Hj[47;25H[53;144H [47;25H[53;1H
+[52;1H# ROS2 workspace auto source[0m[52;154H[K[53;154H116,25[8C95%[47;25H[53;144Hj[47;25H[53;144H [47;4H[53;1H
+[52;1Hsource[0m ~/ros2_ws/install/setup.bash[52;154H[K[53;154H117,4[9C97%[47;4H[53;144Hj[47;4H[53;144H [47;2H[53;1H
+[52;154H[K[53;154H118,2[9C98%[47;2H[53;144Hj[47;2H[53;144H [47;25H[53;1H
+[52;1Halias [0mbattery='[0mpython3 /home/artem/ros2_ws/test_ups_i2c.py'[0m[52;154H[K[53;154H119,25[8CBot[47;25H[53;144Hj[47;25H[53;144H [48;25H[53;155H20[48;25H[53;144Hj[48;25H[53;144H [49;25H[53;156H1[49;25H[53;144Hj[49;25H[53;144H [50;25H[53;156H2[50;25H[53;144Hj[50;25H[53;144H [51;1H[53;156H3,0-1[51;1H[53;144Hj[51;1H[53;144H [52;25H[53;156H4,25 [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hj[52;25H[53;144H [52;25H[53;144Hk[52;25H[53;144H [51;1H[53;156H3,0-1[51;1H[53;144Hk[51;1H[53;144H [50;25H[53;156H2,25 [50;25H[53;144Hk[50;25H[53;144H [49;25H[53;156H1[49;25H[53;144Hk[49;25H[53;144H [48;25H[53;156H0[48;25H[53;144Hk[48;25H[53;144H [47;25H[53;155H19[47;25H[53;144Hk[47;25H[53;144H [46;2H[53;156H8,2 [46;2H[53;144Hk[46;2H[53;144H [45;4H[53;156H7,4[45;4H[53;144Hk[45;4H[53;144H [44;25H[53;156H6,25[44;25H[53;144Hk[44;25H[53;144H [43;25H[53;156H5[43;25H[53;144Hk[43;25H[53;144H [42;25H[53;156H4[42;25H[53;144Hk[42;25H[53;144H [41;25H[53;156H3[41;25H[53;144Hk[41;25H[53;144H [40;25H[53;156H2[40;25H[53;144Hk[40;25H[53;144H [39;25H[53;156H1[39;25H[53;144Hk[39;25H[53;144H [38;25H[53;156H0[38;25H[53;144Hk[38;25H[53;144H [37;25H[53;155H09[37;25H[53;144Hk[37;25H[53;144H [36;1H[53;156H8,0-1[36;1H[53;144Hk[36;1H[53;144H [35;2H[53;156H7,2  [35;2H[53;144Hk[35;2H[53;144H [34;21H[53;156H6,21[34;21H[53;144Hk[34;21H[53;144H [33;25H[53;156H5,25[33;25H[53;144Hk[33;25H[53;144H [32;1H[53;156H4,0-1[32;1H[53;144Hk[32;1H[53;144H [31;25H[53;156H3,25 [31;25H[53;144Hk[31;25H[53;144H [30;25H[53;156H2[30;25H[53;144Hk[30;25H[53;144H [29;25H[53;156H1[29;25H[53;144Hk[29;25H[53;144H [28;20H[53;156H0,20[28;20H[53;144Hk[28;20H[53;144H [27;1H[53;154H99,0-1[27;1H[53;144Hk[27;1H[53;144H [26;25H[53;155H8,25 [26;25H[53;144Hk[26;25H[53;144H [25;19H[53;155H7,19[25;19H[53;144Hk[25;19H[53;144H [24;25H[53;155H6,25[24;25H[53;144Hk[24;25H[53;144H [23;1H[53;155H5,0-1[23;1H[53;144Hk[23;1H[53;144H [22;25H[53;155H4,25 [22;25H[53;144Hk[22;25H[53;144H [21;16H[53;155H3,16[21;16H[53;144Hk[21;16H[53;144H [20;16H[53;155H2[20;16H[53;144Hk[20;16H[53;144H [19;18H[53;155H1,18[19;18H[53;144Hk[19;18H[53;144H [18;22H[53;155H0,22[18;22H[53;144Hk[18;22H[53;144H [17;1H[53;154H89,0-1[17;1H[53;144Hk[17;1H[53;144H [16;25H[53;155H8,25 [16;25H[53;144Hk[16;25H[53;144H [15;25H[53;155H7[15;25H[53;144Hk[15;25H[53;144H [14;1H[53;155H6,0-1[14;1H[53;144Hk[14;1H[53;144H [13;2H[53;155H5,2  [13;2H[53;144Hk[13;2H[53;144H [12;25H[53;155H4,25[12;25H[53;144Hk[12;25H[53;144H [11;25H[53;155H3[11;25H[53;144Hk[11;25H[53;144H [10;25H[53;155H2[10;25H[53;144Hk[10;25H[53;144H [9;1H[53;155H1,0-1[9;1H[53;144Hk[9;1H[53;144H [8;25H[53;155H0,25 [8;25H[53;144Hk[8;25H[53;144H [7;25H[53;154H79[7;25H[53;144Hk[7;25H[53;144H [6;25H[53;155H8[6;25H[53;144Hk[6;25H[53;144H [6;25H[52;1H[K[1;1H[L[1;5H;;[0m[53;154H77,25[9C98%[6;25H[53;144Hk[6;25H[53;144H [6;25H[1;1H[L[1;1H*)[0m[53;154H76,25[9C97%[6;25H[53;144Hk[6;25H[53;144H [6;25H[52;1H[K[1;1H[L[1;5H;;[0m[53;154H75,25[9C95%[6;25H[53;144Hj[6;25H[53;144H [7;25H[53;155H6[7;25H[53;144Hj[7;25H[53;144H [8;25H[53;155H7[8;25H[53;144Hj[8;25H[53;144H [9;25H[53;155H8[9;25H[53;144Hj[9;25H[53;144H [10;25H[53;155H9[10;25H[53;144Hj[10;25H[53;144H [11;25H[53;154H80[11;25H[53;144Hj[11;25H[53;144H [12;1H[53;155H1,0-1[12;1H[53;144Hj[12;1H[53;144H [13;25H[53;155H2,25 [13;25H[53;144Hj[13;25H[53;144H [14;25H[53;155H3[14;25H[53;144Hj[14;25H[53;144H [15;25H[53;155H4[15;25H[53;144Hj[15;25H[53;144H [16;2H[53;155H5,2 [16;2H[53;144H:[16;2H[53;144H[K[53;1H:q[53;1H[K[53;1H]0;artem@RoboticAlt: ~artem@RoboticAlt:~$ setup
+[0.462s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/artem/ros2_ws/install/stream_ros' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.462s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/artem/ros2_ws/install/robot_bringup' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.462s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/artem/ros2_ws/install/diff_drive_l298n' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.462s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/artem/ros2_ws/install/camera' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.4s] [0/0 complete]                     Starting >>> camera
+]0;colcon build [0/4 done] [1 ongoing]Starting >>> diff_drive_l298n
+]0;colcon build [0/4 done] [2 ongoing]Starting >>> robot_bringup
+]0;colcon build [0/4 done] [3 ongoing]Starting >>> stream_ros
+]0;colcon build [0/4 done] [4 ongoing][0.5s] [0/4 complete] [4 ongoing] [camera - 0.1s] [diff_drive_l298n - 0.1s] [robot_bringup - 0.1s] [stream_ros - 0.1s]                                                                                                                      [0.6s] [0/4 complete] [4 ongoing] [camera - 0.2s] [diff_drive_l298n - 0.2s] [robot_bringup - 0.2s] [stream_ros - 0.2s]                                                                                                                      [0.7s] [0/4 complete] [4 ongoing] [camera - 0.3s] [diff_drive_l298n - 0.3s] [robot_bringup - 0.3s] [stream_ros - 0.3s]                                                                                                                      [0.8s] [0/4 complete] [4 ongoing] [cam
